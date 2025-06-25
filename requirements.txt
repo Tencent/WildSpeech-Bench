@@ -1,0 +1,19 @@
+# Core dependencies
+torch>=2.0.0  # 需要指定具体版本
+torchaudio>=2.0.0  # 需要指定具体版本
+datasets==3.0.0
+tqdm==4.66.5
+openai-whisper==20231117
+langdetect
+openai
+
+# Model related
+transformers
+accelerate==0.33.0
+safetensors==0.4.1
+
+# Audio processing
+librosa==0.10.2.post1
+
+# Scientific computing
+scipy==1.14.1
