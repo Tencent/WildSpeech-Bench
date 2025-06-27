@@ -1,0 +1,3 @@
+data/wildspeech_1100.parquet
+outputs/
+**/__pycache__/
