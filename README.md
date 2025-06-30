@@ -4,12 +4,12 @@ Natural Speech Conversation
 </h2>
 
 <p align="center">
-  <a href="https://arxiv.org/abs/2506.21875" style="margin: 0 10px;">📑 Paper</a>
+  <a href="https://arxiv.org/abs/2506.21875" style="margin: 0 10px;">📑 Paper</a> |
   <a href="https://huggingface.co/datasets/tencent/WildSpeech-Bench" style="margin: 0 10px;">🤗 Dataset</a> |
   <a href="https://github.com/Tencent/WildSpeech-Bench" style="margin: 0 10px;">🐙 GitHub</a>
 </p>
 
-This repository contains the evaluation code for the paper "[WildSpeech-Bench: Benchmarking Audio LLMs in Natural Speech Conversation]()".
+This repository contains the evaluation code for the paper "<a href="https://arxiv.org/abs/2506.21875" style="margin: 0 10px;">[WildSpeech-Bench: Benchmarking Audio LLMs in Natural Speech Conversation]</a>".
 
 ---
 
