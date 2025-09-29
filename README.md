@@ -18,7 +18,7 @@ This repository contains the evaluation code for the paper "<a href="https://arx
   <img src="assets/wildspeech.jpg" alt="WildSpeech Overview" style="width: 700px;"> 
 </p>
 
-WildSpeech-Bench is the first benchmark for evaluating the **speech-to-speech** capabilities of speechLLMs, characterized by both its evaluation framework and its construction process.
+WildSpeech-Bench is the first benchmark for evaluating the **speech-to-speech (S2S)** capabilities of speechLLMs, characterized by both its evaluation framework and its construction process.
 
 
 ## 🪝 Construction 
@@ -41,7 +41,7 @@ highlight a specific query’s characteristics and potential pitfalls.
 
 
 
-## 🏆 Main Result
+## 🏆 Leaderboard
 Main evaluation results. TC, II, SR, OE, PF each stand for Text Creation, Information Inquiry, Solution Request, Opinion Exchange and Paralinguistic-Featured query.
 
 | Model                | TC   | II   | SR   | OE   | PF  | Avg. |
@@ -54,6 +54,7 @@ Main evaluation results. TC, II, SR, OE, PF each stand for Text Creation, Inform
 | GPT-4o-Audio      | 6.74 | 6.06 | 6.39 | 6.32 | 6.01                   | 6.29 |
 
 
+We encourage you to submit new results directly through the issue tracker. The ranking list will be updated accordingly.
 
 ## ⚙️ Installation 
 1. Clone the repository
