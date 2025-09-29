@@ -1,6 +1,5 @@
 <h2 align="center" style="font-size: 2.5em; font-weight: bold; color: #2c3e50;">
-  WildSpeech-Bench: Benchmarking Audio LLMs in
-Natural Speech Conversation
+WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild
 </h2>
 
 <p align="center">
@@ -9,23 +8,38 @@ Natural Speech Conversation
   <a href="https://github.com/Tencent/WildSpeech-Bench" style="margin: 0 10px;">🐙 GitHub</a>
 </p>
 
-This repository contains the evaluation code for the paper "<a href="https://arxiv.org/abs/2506.21875" style="margin: 0 10px;">[WildSpeech-Bench: Benchmarking Audio LLMs in Natural Speech Conversation]</a>".
+This repository contains the evaluation code for the paper "<a href="https://arxiv.org/abs/2506.21875" style="margin: 0 10px;">[WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild]</a>".
 
 ---
 
 ## 🔔 Introduction
 
 <p align="center">
-  <img src="assets/wildspeech.jpg" alt="WildSpeech Overview" style="width: 500px;"> 
+  <img src="assets/wildspeech.jpg" alt="WildSpeech Overview" style="width: 700px;"> 
 </p>
 
-**WildSpeech-Bench** is the first end-to-end, systematic benchmark for evaluating the capabilities of audio-to-audio speech dialogue models. The dataset is designed with three key features:
+WildSpeech-Bench is the first benchmark for evaluating the **speech-to-speech** capabilities of speechLLMs, characterized by both its evaluation framework and its construction process.
 
-- Realistic and Diverse Data Curation: We collect real-world chat queries relevant to speech scenarios and synthesize speech data with controlled variations in age, gender, timbre, and speaker distance, ensuring diversity, complexity, and broad coverage.
 
-- Audio-Specific Challenge Simulation: The dataset introduces speech-specific challenges, including queries with semantic ambiguity caused by pauses or emotions, sentences containing near-homophones, and utterances with stuttering. We also incorporate different types of background noise to better assess model robustness in realistic conditions.
+## 🪝 Construction 
 
-- Fine-Grained Performance Evaluation: We design tailored checklists and evaluation prompts for suitable queries, providing fine-grained and scenario-specific assessment criteria that better reflect human requirements and preferences in speech conversations.
+<p align="center">
+  <img src="assets/wildspeech_construction.jpg" alt="WildSpeech Overview" style="width: 700px;"> 
+</p>
+
+Our benchmark construction process directly counters the limitations of current datasets, resulting
+in a curated collection of 1,100 queries organized into five major categories. Each category reflects a
+common user intent, facilitating granular analysis and ensuring comprehensive coverage of real-world
+demands on SpeechLLMs. This involves not only meticulously filtering for queries characteristic of spoken interaction but also a crucial subsequent phase of manual auditing, where **every selected query
+was validated by human experts** to ensure its quality and relevance.
+
+Our evaluation framework significantly improves the precision of LLM-based judging for S2S
+interactions. Moving beyond generic rubrics that often overlook critical nuances, we strategically
+employ unique evaluation prompts for challenging queries. Crucially, these are not generic templates
+but **meticulously hand-crafted checklists**, each manually authored and fine-tuned by our team to
+highlight a specific query’s characteristics and potential pitfalls. 
+
+
 
 ## 🏆 Main Result
 Main evaluation results. TC, II, SR, OE, PF each stand for Text Creation, Information Inquiry, Solution Request, Opinion Exchange and Paralinguistic-Featured query.
@@ -33,10 +47,12 @@ Main evaluation results. TC, II, SR, OE, PF each stand for Text Creation, Inform
 | Model                | TC   | II   | SR   | OE   | PF  | Avg. |
 |----------------------|------|------|------|------|------------------------|------|
 | Naive Pipeline       | 5.55 | 4.98 | 5.51 | 5.18 | 4.84                   | 5.24 |
+| Kimi-Audio       | 4.45 | 4.33 | 4.79 | 4.70 | 4.92                   | 4.54 |
 | GLM-4-Voice       | 5.16 | 4.77 | 5.41 | 5.04 | 4.51                   | 5.03 |
 | MiniCPM          | 5.17 | 4.89 | 5.28 | 5.31 | 4.78                   | 5.08 |
 | Qwen-2.5-omni     | 5.98 | 5.84 | 6.66 | 6.16 | 4.46                   | 6.01 |
 | GPT-4o-Audio      | 6.74 | 6.06 | 6.39 | 6.32 | 6.01                   | 6.29 |
+
 
 
 ## ⚙️ Installation 
@@ -80,6 +96,18 @@ bash scripts/evaluate.sh qwen2p5-omni 2
 Run only results analysis step:
 ```bash
 bash scripts/evaluate.sh qwen2p5-omni 3
+```
+
+## 🔦 Citation
+ ```bibtex
+@misc{zhang2025wildspeechbenchbenchmarkingendtoendspeechllms,
+      title={WildSpeech-Bench: Benchmarking End-to-End SpeechLLMs in the Wild}, 
+      author={Linhao Zhang and Jian Zhang and Bokai Lei and Chuhan Wu and Aiwei Liu and Wei Jia and Xiao Zhou},
+      year={2025},
+      eprint={2506.21875},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+}
 ```
 
 
